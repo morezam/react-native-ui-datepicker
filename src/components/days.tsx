@@ -42,6 +42,7 @@ const Days = () => {
     hideWeekdays,
     components,
     isRTL,
+    fontFamily
   } = useCalendarContext();
 
   const style = useMemo(() => createDefaultStyles(isRTL), [isRTL]);
@@ -247,6 +248,7 @@ const Days = () => {
               styles={styles}
               classNames={classNames}
               components={components}
+              fontFamily={fontFamily}
             />
           ) : (
             <EmptyDay key={index} />

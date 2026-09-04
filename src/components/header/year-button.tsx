@@ -17,6 +17,7 @@ const YearButton = () => {
     calendar = 'gregory',
     numerals = 'latn',
     components,
+    fontFamily
   } = useCalendarContext();
 
   const years = getYearRange(currentYear);
@@ -60,7 +61,10 @@ const YearButton = () => {
         className={classNames?.year_selector}
       >
         <Text
-          style={styles?.year_selector_label}
+          style={[
+            styles?.year_selector_label,
+            fontFamily ? { fontFamily } : null 
+          ]}
           className={classNames?.year_selector_label}
         >
           {label}

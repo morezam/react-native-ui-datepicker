@@ -18,6 +18,7 @@ const Months = () => {
     calendar = 'gregory',
     locale,
     isRTL,
+    fontFamily,
   } = useCalendarContext();
 
   const style = useMemo(
@@ -51,6 +52,7 @@ const Months = () => {
             styles.month_label,
             isSelected && styles.selected_month_label,
             isDisabled && styles.disabled_label,
+            fontFamily ? { fontFamily } : null,
           ]);
 
           const containerClassName = cn(

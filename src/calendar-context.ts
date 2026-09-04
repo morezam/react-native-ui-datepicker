@@ -10,6 +10,7 @@ export interface CalendarContextType extends DatePickerBaseProps {
   currentDate: DateType; // used for latest state of calendar based on Month and Year
   currentYear: number;
   isRTL: boolean;
+  fontFamily?: string;
   setCalendarView: (value: CalendarViews) => void;
   onSelectDate: (date: DateType) => void;
   onSelectMonth: (month: number) => void;

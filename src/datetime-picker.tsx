@@ -124,6 +124,7 @@ const DateTimePicker = (
     onYearChange = () => {},
     use12Hours,
     containerStyle,
+    fontFamily,
   } = props;
 
   const allowRangeReset =
@@ -659,6 +660,7 @@ const DateTimePicker = (
       style,
       className,
       use12Hours,
+      fontFamily
     }),
     [
       mode,
@@ -690,6 +692,7 @@ const DateTimePicker = (
       style,
       className,
       use12Hours,
+      fontFamily
     ]
   );
 

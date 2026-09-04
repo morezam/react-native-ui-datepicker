@@ -8,6 +8,7 @@ export type HeaderProps = {
   styles?: Styles;
   classNames?: ClassNames;
   isRTL: boolean;
+  fontFamily?:string
 };
 
 export type NavigationProps = {

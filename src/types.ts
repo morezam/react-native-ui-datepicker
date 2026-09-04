@@ -206,6 +206,7 @@ export interface DatePickerBaseProps {
   year?: number;
   onMonthChange?: (month: number) => void;
   onYearChange?: (year: number) => void;
+  fontFamily?: string;
 }
 
 export type Numerals =

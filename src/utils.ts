@@ -486,7 +486,8 @@ export const getMonthDays = (
   daysInNextMonth: number,
   numerals: Numerals
 ): CalendarDay[] => {
-  const date = dayjs(datetime);
+  // FIX: Anchor to the 1st of the month to prevent 31st-day overflow
+  const date = dayjs(datetime).date(1);
 
   const prevDays = showOutsideDays
     ? Array.from({ length: prevMonthOffset }, (_, index) => {
@@ -543,7 +544,6 @@ export const getMonthDays = (
 
   return [...prevDays, ...currentDays, ...nextDays];
 };
-
 /**
  * Generate day object for displaying inside day cell
  *

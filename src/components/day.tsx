@@ -19,6 +19,7 @@ interface Props {
   styles?: Styles;
   classNames?: ClassNames;
   components?: CalendarComponents;
+  fontFamily?: string;
 }
 
 export const EmptyDay = React.memo(() => {
@@ -33,6 +34,7 @@ const Day = ({
   styles = {},
   classNames = {},
   components = {},
+  fontFamily,
 }: Props) => {
   const style = useMemo(
     () => createDefaultStyles(containerHeight, weekdaysHeight),
@@ -78,6 +80,7 @@ const Day = ({
     inMiddle && styles.range_middle_label,
     rangeStart && styles.range_start_label,
     rangeEnd && styles.range_end_label,
+    fontFamily ? { fontFamily } : null,
   ]);
 
   const containerClassName = cn(

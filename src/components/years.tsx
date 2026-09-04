@@ -26,6 +26,7 @@ const Years = () => {
     minDate,
     maxDate,
     isRTL,
+    fontFamily,
   } = useCalendarContext();
 
   const style = useMemo(
@@ -57,6 +58,7 @@ const Years = () => {
         isActivated && styles.active_year_label,
         isSelected && styles.selected_year_label,
         isDisabled && styles.disabled_label,
+        fontFamily ? { fontFamily } : null,
       ]);
 
       const containerClassName = cn(

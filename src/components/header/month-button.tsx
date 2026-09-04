@@ -16,6 +16,7 @@ const MonthButton = () => {
     disableMonthPicker,
     monthCaptionFormat,
     components,
+    fontFamily
   } = useCalendarContext();
 
   const currentMonthText = dayjs(currentDate)
@@ -53,7 +54,10 @@ const MonthButton = () => {
         className={classNames?.month_selector}
       >
         <Text
-          style={styles?.month_selector_label}
+          style={[
+            styles?.month_selector_label,
+            fontFamily ? { fontFamily } : null 
+          ]}
           className={classNames?.month_selector_label}
         >
           {currentMonthText}
